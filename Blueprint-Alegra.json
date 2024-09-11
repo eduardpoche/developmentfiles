@@ -23,10 +23,6 @@
       }
     },
     {
-      "step": "runPHP",
-      "code": "<?php require_once 'wordpress/wp-load.php'; update_option('woocommerce_hpos_enabled', 'no'); update_option('woocommerce_store_address', '123 Demo Street'); update_option('woocommerce_store_address_2', ''); update_option('woocommerce_store_city', 'Demo City'); update_option('woocommerce_store_postcode', '12345'); update_option('woocommerce_default_country', 'US:CA'); update_option('woocommerce_currency', 'USD'); update_option('woocommerce_admin_disabled', true); $cod_settings = get_option('woocommerce_cod_settings', array()); $cod_settings['enabled'] = 'yes'; update_option('woocommerce_cod_settings', $cod_settings); $product_title = 'Demo Product';  $product_price = '9.99'; $product_description = 'This is a demo product. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'; $post_data = array( 'post_title'    => $product_title,'post_content'  => $product_description,'post_status'   => 'publish','post_type'     => 'product' ); $product_id = wp_insert_post($post_data); if (!is_wp_error($product_id)) {update_post_meta($product_id, '_price', $product_price);}; $checkout_page_id = get_option('woocommerce_checkout_page_id'); if ($checkout_page_id) {$checkout_content = '[woocommerce_checkout]'; wp_update_post(array('ID'=> $checkout_page_id,'post_content' => $checkout_content));};"
-    },
-    {
       "step": "installPlugin",
       "pluginZipFile": {
         "resource": "url",
