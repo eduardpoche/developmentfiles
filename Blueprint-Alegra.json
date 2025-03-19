@@ -28,10 +28,13 @@
     },
     {
       "step": "installTheme",
-      "themeZipFile": {
+      "themeData": {
         "resource": "wordpress.org/themes",
-        "slug": "hello-elementor"
-      }
+        "slug": "storefront"
+      },
+            "options": {
+                "activate": true
+            }
     },
     {
       "step": "login",
