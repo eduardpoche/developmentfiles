@@ -19,7 +19,7 @@
         "slug": "woocommerce"
       },
       "options": {
-        "activate": true
+        "activate": false
       }
     },
     {
